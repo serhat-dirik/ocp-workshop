@@ -4,7 +4,7 @@ name: OCP
 revision: ocp_3_5
 
 content:
-  url: https://raw.githubusercontent.com/serhat/ocp-workshop/master
+  url: https://raw.githubusercontent.com/serhat-dirik/ocp-workshop/master
 
 vars:
   ENVIRONMENT: "Hyperidea"
