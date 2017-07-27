@@ -25,7 +25,7 @@ vars:
   JAVA_BUILDER_PROPER: "JBoss EAP 7"
   JAVA_BUILDER_STRING: "jboss-eap70-openshift:1.4"
   USER_NAME: "userXX"
-  USER_PASSWORD: "redhat$1"
+  USER_PASSWORD: "redhat+1"
   PARKSMAP_IMAGENAME: "parksmap"
   PARKSMAP_VERSION: "1.2.0"
   PARKSMAP_PY: false
