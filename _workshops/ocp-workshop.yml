@@ -38,6 +38,7 @@ vars:
   DOWNLOAD_CLIENT_MAC: "http://nexus-tk.app.hyperidea.com/content/sites/binary/oc-client/oc-3.5.5.31-macosx.tar.gz"
   DOWNLOAD_CLIENT_LIN64: "http://nexus-tk.app.hyperidea.com/content/sites/binary/oc-client/oc-3.5.5.31-linux.tar.gz"
   CONSOLE_ADDRESS: "https://master.hyperidea.com:8443"
+  ROUTER_ADDRESS: "*.app.hyperidea.com"
 
 modules:
   activate:
