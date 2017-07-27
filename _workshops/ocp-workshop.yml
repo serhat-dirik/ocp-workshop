@@ -20,7 +20,7 @@ vars:
   SUFFIX: "XX"
   USER_SUFFIX: "-XX"
   GOGS_USER: "userXX"
-  GOGS_PASSWORD: "redhat$1"
+  GOGS_PASSWORD: "redhat+1"
   GOGS_URL: "http://gogs-tk.app.hyperidea.com"
   JAVA_BUILDER_PROPER: "JBoss EAP 7"
   JAVA_BUILDER_STRING: "jboss-eap70-openshift:1.4"
