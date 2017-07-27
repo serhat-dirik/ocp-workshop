@@ -113,7 +113,7 @@ $ oc set volumes dc/nationalparks --add -m /deployments/config --configmap-name=
 
 The above command makes the content of the configmap `ConfigMap`, which you
 created from a file, called `application.properties`, available in the
-`/opt/openshift/config` directory. The `nationalparks` *DeploymentConfiguration*
+`/deployments/config` directory. The `nationalparks` *DeploymentConfiguration*
 detects the configuration change, and automatically deploys the *Pod* with
 the new configuration.
 

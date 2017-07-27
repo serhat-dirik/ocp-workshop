@@ -43,7 +43,7 @@ Scroll down to the bottom of the page and click **Commit changes**.
 
 {% else %}
 
-#### Exercise: Configuring GOGS Web Hooks
+#### Exercise: Configuring Gogs Web Hooks
 
 {% if modules.pipelines %}
 In previous labs, you created a CI/CD Pipeline to automate build, test and deployment of
@@ -69,7 +69,7 @@ image::ocp-webhook1.png[Webhook]
 
 
 Once you have the URL copied to your clipboard, navigate to the code repository
-that you have on your local GOGS:
+that you have on your local Gogs:
 
 [source,role=copypaste]
 ----
@@ -89,30 +89,23 @@ Username: {{GOGS_USER}}
 Password: {{GOGS_PASSWORD}}
 ====
 
-Click the Settings link on the top right of the screen, and then click "Integrations":
+Click the Settings link on the top right of the screen, and then click "Webhooks".
+On the new page click on the blue "Add Webhook" button on the top right of the form and
+choose "Gogs" from the popup menu:
 
-image::ocp-webhook2.png[Webhook]
+image::ocp-webhook2-gogs.png[Webhook]
 
-In the next screen, paste your link into the "URL" field. You can leave the
+In the next screen, paste your link into the "Payload URL" field. You can leave the
 secret token field blank -- the secret is already in the URL and does not need
 to be in the payload.
 
-image::ocp-webhook3.png[Webhook]
-
-Scroll to the bottom of the page. Make sure you *un-check* the SSL verification
-box. Remember that OpenShift's API is not presenting an SSL certificate signed
-by a known/trusted authority. Without *un-checking* the verification box, the
-webhook will fail.
-
 Finally, click on "Add webhook".
-
-image::ocp-webhook4.png[Webhook]
 
 Boom! From now on, every time you commit new source code to your git
 repository, a new build and deploy will occur inside of OpenShift.  Let's try
-this out.
+this out as clicking "Test Delivery" button on the bottom right of the form.
 
-#### Exercise: Using GOGS Web Hooks
+#### Exercise: Using Web Hooks
 
 {% if PARKSMAP_PY %}
 Be sure you return to the proper tag in the git repository:
@@ -145,9 +138,8 @@ To
 
 {% else %}
 
-Click "Project" at the top of the Gogs page, and then "Files" towards the
-middle of the page. This is Gogs's repository view. Make sure that the
-drop-down menu at the upper right is set for the `{{NATIONALPARKS_VERSION}}` branch. Navigate to the
+Click "Files" at the Gogs page. This is Gogs's repository view. Make sure that the
+drop-down menu at the upper left is set for the `{{NATIONALPARKS_VERSION}}` branch. Navigate to the
 following path:
 
 [source]
@@ -160,7 +152,7 @@ Then click on the `BackendController.java` file.
 Once you have the file on the screen, click the edit button in the top right
 hand corner as shown here:
 
-image::ocp-webhook5.png[Webhook]
+image::ocp-webhook5-gogs.png[Webhook]
 
 Change line number 20:
 

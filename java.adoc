@@ -69,7 +69,7 @@ and located at the following URL:
 
 [source,role=copypaste]
 ----
-{{GOGS_URL}}/{{GOGS_USER}}/nationalparks/tree/{{NATIONALPARKS_VERSION}}
+{{GOGS_URL}}/{{GOGS_USER}}/nationalparks/src/{{NATIONALPARKS_VERSION}}
 ----
 
 [NOTE]
@@ -123,7 +123,7 @@ To speed build process, a Sonatype Nexus server is running in the environment
 that will cache your dependencies as you pull them down. To use it, you need to
 scroll down to *Build Configuration* and add an environment variable named
 *MAVEN_MIRROR_URL* with value
-`http://nexus.workshop-infra.svc.cluster.local:8081/content/groups/public`
+`http://nexus-tk.app.hyperidea.com/content/groups/public/`
 
 image::new-national-parks-2.png[Runtimes]
 {% endif %}
