@@ -237,7 +237,7 @@ If you then go back to `/ws/data/all` you will see tons of JSON data now.
 That's great. Our parks map should finally work!
 
 NOTE: There's some errors reported with browsers like firefox 54 that don't properly parse the resulting JSON. It's
-a browser problem, and the application is working properly. 
+a browser problem, and the application is working properly.
 
 [source]
 ----
@@ -260,9 +260,9 @@ here:
 [source,role=copypaste]
 ----
 {% if PARKSMAP_PY %}
-http://{{GITLAB_URL_PREFIX}}.{{ROUTER_ADDRESS}}/{{GITLAB_USER}}/nationalparks-py/blob/{{NATIONALPARKS_VERSION}}/wsgi.py#L11-18
+{{GOGS_URL}}/{{GOGS_USER}}/nationalparks-py/blob/{{NATIONALPARKS_VERSION}}/wsgi.py#L11-18
 {% else %}
-http://{{GITLAB_URL_PREFIX}}.{{ROUTER_ADDRESS}}/{{GITLAB_USER}}/nationalparks/blob/{{NATIONALPARKS_VERSION}}/src/main/java/com/openshift/evg/roadshow/parks/db/MongoDBConnection.java#L44-l48
+{{GOGS_URL}}/{{GOGS_USER}}/nationalparks/blob/{{NATIONALPARKS_VERSION}}/src/main/java/com/openshift/evg/roadshow/parks/db/MongoDBConnection.java#L44-l48
 {% endif %}
 ----
 

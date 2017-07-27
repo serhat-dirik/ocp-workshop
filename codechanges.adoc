@@ -43,12 +43,12 @@ Scroll down to the bottom of the page and click **Commit changes**.
 
 {% else %}
 
-#### Exercise: Configuring GitLab Web Hooks
+#### Exercise: Configuring GOGS Web Hooks
 
 {% if modules.pipelines %}
 In previous labs, you created a CI/CD Pipeline to automate build, test and deployment of
 the `nationalparks` application. In this lab you can use the pipline webhook to
-trigger a pipeline execution every time there is a change in the `nationalparks` GitLab
+trigger a pipeline execution every time there is a change in the `nationalparks` gogs
 repository. In the OpenShift web console, navigate to your `{{EXPLORE_PROJECT_NAME}}{{USER_SUFFIX}}` *Project*, and
 then mouse-over *Browse* and then *Pipelines*. Click the `nationalparks-pipeline` and
 then *Configuration* tab.
@@ -69,24 +69,24 @@ image::ocp-webhook1.png[Webhook]
 
 
 Once you have the URL copied to your clipboard, navigate to the code repository
-that you have on your local GitLab:
+that you have on your local GOGS:
 
 [source,role=copypaste]
 ----
 {% if PARKSMAP_PY %}
-http://{{GITLAB_URL_PREFIX}}.{{ROUTER_ADDRESS}}/{{GITLAB_USER}}/nationalparks-py/tree/{{NATIONALPARKS_VERSION}}
+{{GOGS_URL}}/{{GOGS_USER}}/nationalparks-py/tree/{{NATIONALPARKS_VERSION}}
 {% else %}
-http://{{GITLAB_URL_PREFIX}}.{{ROUTER_ADDRESS}}/{{GITLAB_USER}}/nationalparks
+{{GOGS_URL}}/{{GOGS_USER}}/nationalparks
 {% endif %}
 ----
 
 [NOTE]
 ====
-The credentials for this GitLab instance are:
+The credentials for this gogs instance are:
 
-Username: {{GITLAB_USER}}
+Username: {{GOGS_USER}}
 
-Password: {{GITLAB_PASSWORD}}
+Password: {{GOGS_PASSWORD}}
 ====
 
 Click the Settings link on the top right of the screen, and then click "Integrations":
@@ -108,19 +108,19 @@ Finally, click on "Add webhook".
 
 image::ocp-webhook4.png[Webhook]
 
-Boom! From now on, every time you commit new source code to your GitLab
+Boom! From now on, every time you commit new source code to your git
 repository, a new build and deploy will occur inside of OpenShift.  Let's try
 this out.
 
-#### Exercise: Using GitLab Web Hooks
+#### Exercise: Using GOGS Web Hooks
 
 {% if PARKSMAP_PY %}
 Be sure you return to the proper tag in the git repository:
 
-*link:http://{{GITLAB_URL_PREFIX}}.{{ROUTER_ADDRESS}}/{{GITLAB_USER}}/nationalparks-py/tree/{{NATIONALPARKS_VERSION}}[]*
+*link:{{GOGS_URL}}/{{GOGS_USER}}/nationalparks-py/tree/{{NATIONALPARKS_VERSION}}[]*
 
-Click "Project" at the top of the GitLab page, and then "Files" towards the
-middle of the page. This is GitLab's repository view. Make sure that the
+Click "Project" at the top of the gogs page, and then "Files" towards the
+middle of the page. This is Gogs's repository view. Make sure that the
 drop-down menu at the upper right is set for the `1.0.0` branch. Navigate to the
 root path and click on the `wsgi.py` file.
 
@@ -145,8 +145,8 @@ To
 
 {% else %}
 
-Click "Project" at the top of the GitLab page, and then "Files" towards the
-middle of the page. This is GitLab's repository view. Make sure that the
+Click "Project" at the top of the Gogs page, and then "Files" towards the
+middle of the page. This is Gogs's repository view. Make sure that the
 drop-down menu at the upper right is set for the `{{NATIONALPARKS_VERSION}}` branch. Navigate to the
 following path:
 

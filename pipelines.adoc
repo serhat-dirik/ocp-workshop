@@ -140,7 +140,7 @@ and create a distinct *ConfigMap*. The file is located here:
 
 [source,role=copypaste]
 ----
-http://gitlab-ce-workshop-infra.{{ROUTER_ADDRESS}}/{{GITLAB_USER}}/nationalparks/raw/{{NATIONALPARKS_VERSION}}/ose3/application-live.properties
+{{GOGS_URL}}/{{GOGS_USER}}/nationalparks/raw/{{NATIONALPARKS_VERSION}}/ose3/application-live.properties
 ----
 
 Then, run the following command to create the live *ConfigMap*:
@@ -267,8 +267,8 @@ Similar to the link:databases[previous labs], populate the database by pointing 
 http://nationalparks-live-{{EXPLORE_PROJECT_NAME}}{{USER_SUFFIX}}.{{ROUTER_ADDRESS}}/ws/data/load/
 ----
 
-NOTE: If the application has not been deployed yet, you might get a __502 Bad Gateway error webpage__. This 
-means that the application backing up the route is not yet ready. Wait until the pod is up. 
+NOTE: If the application has not been deployed yet, you might get a __502 Bad Gateway error webpage__. This
+means that the application backing up the route is not yet ready. Wait until the pod is up.
 
 #### Label Service
 As discussed in link:databases[previous labs], the `parksmap` web app queries the OpenShift API and
@@ -345,8 +345,8 @@ verify the service works as expected.
 http://nationalparks-{{EXPLORE_PROJECT_NAME}}{{USER_SUFFIX}}.{{ROUTER_ADDRESS}}/ws/data/all/
 ----
 
-NOTE: If the application has not been deployed yet, you might get a __502 Bad Gateway error webpage__. This 
-means that the application backing up the route is not yet ready. Wait until the pod is up. 
+NOTE: If the application has not been deployed yet, you might get a __502 Bad Gateway error webpage__. This
+means that the application backing up the route is not yet ready. Wait until the pod is up.
 
 After the test stage, pipeline waits for manual approval in order to deploy to the
 *Live* container.

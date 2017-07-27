@@ -57,24 +57,24 @@ Because the `nationalparks` application is a back-end to serve data that our
 existing front-end will consume, we are going to build it inside the existing
 `{{EXPLORE_PROJECT_NAME}}{{USER_SUFFIX}}` project. And, we will do it from the web console.
 
-#### Using application code on embedded GitLab
+#### Using application code on embedded Gogs
 
-OpenShift can work with any accessible Git repository. This could be GitHub,
-GitLab, or any other server that speaks Git. You can even register webhooks in
+OpenShift can work with any accessible Git repository. This could be Gogs,
+Gogs, or any other server that speaks Git. You can even register webhooks in
 your Git server to initiate OpenShift builds triggered by any update to the
 application code!
 
-The repository that we are going to use is already cloned in the internal GitLab repository
+The repository that we are going to use is already cloned in the internal git repository
 and located at the following URL:
 
 [source,role=copypaste]
 ----
-http://{{GITLAB_URL_PREFIX}}.{{ROUTER_ADDRESS}}/{{GITLAB_USER}}/nationalparks/tree/{{NATIONALPARKS_VERSION}}
+{{GOGS_URL}}/{{GOGS_USER}}/nationalparks/tree/{{NATIONALPARKS_VERSION}}
 ----
 
 [NOTE]
 ====
-Your GitLab credentials are: *{{GITLAB_USER}}/{{GITLAB_PASSWORD}}*
+Your Gogs credentials are: *{{GOGS_USER}}/{{GOGS_PASSWORD}}*
 ====
 
 Later in the lab, we want you to make a code change and then rebuild your
@@ -84,7 +84,7 @@ application. This is a fairly simple Spring framework Java application.
 
 Similar to how we used "Add to project" before with a Docker-formatted image, we
 can do the same for specifying a source code repository. Since for this lab you
-have your own GitLab repository, let's use it with a simple Java S2I image.
+have your own git repository, let's use it with a simple Java S2I image.
 
 In the OpenShift web console, find your `{{EXPLORE_PROJECT_NAME}}{{USER_SUFFIX}}` project, and then
 click the *"Add to Project"* button. You will see a list of categories of
@@ -101,7 +101,7 @@ and for the Git repository URL, enter:
 
 [source,role=copypaste]
 ----
-http://{{GITLAB_URL_PREFIX}}.{{ROUTER_ADDRESS}}/{{GITLAB_USER}}/nationalparks.git
+{{GOGS_URL}}/{{GOGS_USER}}/nationalparks.git
 ----
 
 NOTE: All of these runtimes shown are made available via *Templates* and
