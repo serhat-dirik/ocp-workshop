@@ -58,6 +58,7 @@ modules:
   - application-health
   - pipelines
   - codechanges
+  - canaryrelease
   - templates
   - clustering
   - further-resources

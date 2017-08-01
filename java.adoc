@@ -67,12 +67,12 @@ Your Gogs credentials are: *{{GOGS_USER}}/{{GOGS_PASSWORD}}*
 The repository that we are going to use need to be cloned into your user space.
 Later in the lab, we want you to make a code change and then rebuild your
 application. This is a fairly simple Spring framework Java application. You need
-to switch to "Mirror" tab to clone project source code and click on the "blue plus"
+to switch to "Mirror" tab to clone project source code and click on the blue plus
 icon on the top right corner.
 
 image::gogs-mirror.png[Clonning]
 
-On the "New Migration" form, you need to specify the clone address as below:name:
+On the "New Migration" form, you need to specify the clone address as below:
 [source,role=copypaste]
 ----
 {{NATIONALPARKS_GIT_URL}}
