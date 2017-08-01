@@ -43,6 +43,50 @@ https://{{DOCS_URL}}/latest/creating_images/s2i.html[OpenShift S2I documentation
 or on GitHub (following the link above). The only key concept you need to
 remember about S2I is that it's magic.
 
+#### Using application code on embedded Gogs
+
+OpenShift can work with any accessible Git repository. This could be Gogs,
+GitLab, or any other server that speaks Git. You can even register webhooks in
+your Git server to initiate OpenShift builds triggered by any update to the
+application code!
+
+In this example we're going to use Gogs that is previously installed for you.
+Go to the given url below and login with your credentials.
+
+[source,role=copypaste]
+----
+{{GOGS_URL}}
+----
+
+[NOTE]
+====
+Your Gogs credentials are: *{{GOGS_USER}}/{{GOGS_PASSWORD}}*
+====
+
+### Exercise: Cloning your own project
+The repository that we are going to use need to be cloned into your user space.
+Later in the lab, we want you to make a code change and then rebuild your
+application. This is a fairly simple Spring framework Java application. You need
+to switch to "Mirror" tab to clone project source code and click on the "blue plus"
+icon on the top right corner.
+
+image::gogs-mirror.png[Clonning]
+
+On the "New Migration" form, you need to specify the clone address as below:name:
+[source,role=copypaste]
+----
+{{NATIONALPARKS_GIT_URL}}
+----
+
+Pick "nationalparks" as your new repository name and make sure that "This repository
+will be a mirror" checkbox is unchecked.
+
+image::gogs-new-migration.png[Clonning]
+
+Click on the "Migrate Repository" button and wait until Gogs clone the original
+repository for you.
+
+
 ### Exercise: Creating a Java application
 
 The backend service that we will be deploying as part of this exercise is
@@ -56,29 +100,6 @@ places.
 Because the `nationalparks` application is a back-end to serve data that our
 existing front-end will consume, we are going to build it inside the existing
 `{{EXPLORE_PROJECT_NAME}}{{USER_SUFFIX}}` project. And, we will do it from the web console.
-
-#### Using application code on embedded Gogs
-
-OpenShift can work with any accessible Git repository. This could be Gogs,
-Gogs, or any other server that speaks Git. You can even register webhooks in
-your Git server to initiate OpenShift builds triggered by any update to the
-application code!
-
-The repository that we are going to use is already cloned in the internal git repository
-and located at the following URL:
-
-[source,role=copypaste]
-----
-{{GOGS_URL}}/{{GOGS_USER}}/nationalparks/src/{{NATIONALPARKS_VERSION}}
-----
-
-[NOTE]
-====
-Your Gogs credentials are: *{{GOGS_USER}}/{{GOGS_PASSWORD}}*
-====
-
-Later in the lab, we want you to make a code change and then rebuild your
-application. This is a fairly simple Spring framework Java application.
 
 #### Build the Code on OpenShift
 
