@@ -82,7 +82,7 @@ Are you ready for the magic command?  Here it is:
 {% if USE_MAVEN %}
 [source]
 ----
-oc new-app --template=mlbparks --name=mlbparks -p MAVEN_MIRROR_URL=http://nexus-tk.app.hyperidea.com/content/groups/public
+oc new-app --template=mlbparks --name=mlbparks -p MAVEN_MIRROR_URL={{MAVEN_MIRROR_URL}}
 ----
 
 {% else %}
