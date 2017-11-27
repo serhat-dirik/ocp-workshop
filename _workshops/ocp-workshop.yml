@@ -22,6 +22,7 @@ vars:
   GOGS_USER: "userXX"
   GOGS_PASSWORD: "RedHat-1"
   GOGS_URL: "http://gogs-tk.app.hyperidea.com"
+  MAVEN_MIRROR_URL: "http://nexus-tk.app.hyperidea.com/content/groups/public/"
   JAVA_BUILDER_PROPER: "JBoss EAP 7"
   JAVA_BUILDER_STRING: "jboss-eap70-openshift:1.4"
   USER_NAME: "userXX"

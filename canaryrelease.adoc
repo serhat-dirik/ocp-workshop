@@ -5,7 +5,7 @@
 
 #### Exercise: TBD
 
-Got to GitLab and change "National Parks" name to "National Parks Geo" in `src/main/java/com/openshift/evg/roadshow/parks/rest/BackendController.java`.
+Got to Gogs and change "National Parks" name to "National Parks Geo" in `src/main/java/com/openshift/evg/roadshow/parks/rest/BackendController.java`.
 Commit the change to trigger the pipeline and wait at "Input Required" in pipeline
 
 Go to *Applications* -> *Routes* and click on `nationalparks-live`. Edit the route

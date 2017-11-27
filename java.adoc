@@ -143,9 +143,7 @@ image::nationalparks-tag.png[Runtimes]
 To speed build process, a Sonatype Nexus server is running in the environment
 that will cache your dependencies as you pull them down. To use it, you need to
 scroll down to *Build Configuration* and add an environment variable named
-*MAVEN_MIRROR_URL* with value
-`http://nexus-tk.app.hyperidea.com/content/groups/public/`
-
+*MAVEN_MIRROR_URL* with value {{MAVEN_MIRROR_URL}}
 image::new-national-parks-2.png[Runtimes]
 {% endif %}
 
